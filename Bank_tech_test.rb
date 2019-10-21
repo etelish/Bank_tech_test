@@ -6,7 +6,7 @@ attr_reader :balance, :date
 
   def initialize
     @balance = 0
-    @date = Date.strptime("10-01-2012", '%d-%m-%y').to_s
+    @date = "10-01-2012"
 
   end
 

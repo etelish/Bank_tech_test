@@ -21,11 +21,8 @@ describe Statement do
   end
 
   it 'allows user to see date of transaction' do
-    expect(subject.date).to eq("2012-01-10")
+    expect(subject.date).to eq("10-01-2012")
   end
-
-
-
 
 
 
