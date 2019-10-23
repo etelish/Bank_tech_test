@@ -7,31 +7,25 @@ attr_reader :balance, :date, :bank_statement
 
   def initialize
     @balance = 0
-    @date = "10-01-2012"
-    @bank_statement = []
+    @date = Date.new(2019,10,23).strftime("%d-%m-%Y")
+    @bank_statement = ['date || credit || debit || balance']
 
   end
 
   def deposit(amount)
   @balance =  amount + @balance
+  @bank_statement.push("#{@date} || #{amount} ||    || #{@balance}")
   end
 
   def withdraw(amount)
     @balance = @balance - amount
+    @bank_statement.push("#{@date} ||  || #{amount}   || #{@balance}")
   end
 
-  def transaction_type
-    if @balance > 0
-      return 'credit'
-    else
-    return  'debit'
+def display
+  @bank_statement.each do |transaction|
+    puts transaction
   end
-end
-
-def print_1
-  'date || credit || debit || balance'
-  # + "\n" + "#{@date} ||  ||    || #{@balance}"
-
 end
 
 end
