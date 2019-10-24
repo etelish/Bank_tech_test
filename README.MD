@@ -10,6 +10,7 @@
 ####Acceptance criteria
 
 ##User Stories
+
 ```
 1. As a user so that I don't carry a large sum of money around, I'd like to deposit money into my account.
 2. As a user so that I can pay for things in cash when needed i'd like to be able to withdraw money from my account.
