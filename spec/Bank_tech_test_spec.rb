@@ -17,7 +17,6 @@ describe Statement do
 
   it 'allows user to deposit funds' do
     expect(subject).to respond_to(:deposit).with(1).argument
-    # subject.print_1()
     subject.deposit(500)
     expect(subject.balance).to eq(500)
     expect(subject.bank_statement).to eq(["date || credit || debit || balance", "23-10-2019 || 500 ||    || 500"])
@@ -25,7 +24,6 @@ describe Statement do
 
   it 'allows a user to withdraw funds' do
     expect(subject).to respond_to(:withdraw).with(1).argument
-    # subject.print_1()
     subject.deposit(500)
     subject.withdraw(100)
     expect(subject.balance).to eq(400)
@@ -37,8 +35,5 @@ it 'displays bank statement seperated by transaction type on each line' do
   subject.withdraw(100)
   expect(subject.display).to eq(["date || credit || debit || balance", "23-10-2019 || 500 ||    || 500", "23-10-2019 ||  || 100   || 400"] )
 end
-
-
-
 
 end

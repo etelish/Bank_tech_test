@@ -1,5 +1,4 @@
 require 'date'
-require 'time'
 
 class Statement
 
